@@ -1,0 +1,32 @@
+nombre: sincronizador_api
+titulo: Sincronizador del API
+descripcion: Descarga del API público de OGame la configuración, alianzas, jugadores y planetas de cada universo y los vuelca en las tablas del núcleo.
+version: 1.0.0
+autor:
+  nombre: GalaxytoolNG
+  url: https://github.com/GalaxytoolNG
+url: https://github.com/GalaxytoolNG/sincronizador_api
+repositorio: https://github.com/GalaxytoolNG/sincronizador_api.git
+actualizaciones: https://galaxytoolng.github.io/sincronizador_api/version.json
+licencia: GPL-3.0-or-later
+clase: Complementos\SincronizadorApi\Complemento
+prefijo_rutas: sincronizar
+dependencias:
+  núcleo: ">=1.0.0"
+tablas:
+  - nombre: c_sincronizador_api_partes
+    descripcion: Último documento importado de cada parte del API por universo (timestamp del XML, momento y registros)
+permisos:
+  acceso: Sincronizar los universos asociados al usuario
+  operador: Sincronizar cualquier universo conocido, también por API con clave
+  administrador: Cambiar la configuración del sincronizador
+menu:
+  - texto: Sincronizador
+    ruta: /sincronizar
+    nivel: acceso
+configuracion:
+  tiempo_espera:
+    tipo: entero
+    defecto: 60
+    titulo: Tiempo de espera (segundos)
+    ayuda: Máximo que se espera a que el API de OGame responda cada descarga

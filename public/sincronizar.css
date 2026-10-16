@@ -1,0 +1,13 @@
+/* Sincronizador del API: estilos propios del complemento (la rueda .estado la aporta el núcleo) */
+#sincronizador th.columna-api label { display: inline; margin: 0; color: var(--texto-blanco); font-weight: 700; cursor: pointer; }
+#sincronizador .acciones-globales { display: flex; gap: 6px; }
+#sincronizador td.celda-api { min-width: 140px; }
+#sincronizador .opcion { display: inline-flex; align-items: center; gap: 6px; margin: 0; font-weight: 400; color: var(--texto); cursor: pointer; }
+#sincronizador .ultima { display: block; color: var(--texto-secundario); font-size: 10px; margin-top: 2px; }
+#sincronizador .detalle { display: block; font-size: 10px; margin-top: 2px; min-height: 12px; color: var(--texto-tabla); }
+#sincronizador .detalle.ok { color: var(--ok); }
+#sincronizador .detalle.error { color: var(--error); }
+#sincronizador .detalle.trabajando, #sincronizador .detalle.cola { color: var(--acento); }
+#sincronizador .acciones-finales { display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 10px 15px 0; }
+#sincronizador .resumen { flex: 1; color: var(--texto-tabla); }
+#sincronizador.trabajando input.seleccion { pointer-events: none; }
