@@ -64,7 +64,7 @@ $fecha = fn(?int $t) => $t ? date('d/m/Y H:i', $t) : '—';
                     </td>
                 <?php endforeach; ?>
                 <td class="accion-fila">
-                    <button type="button" class="btn" data-sincronizar-fila="<?= $e($u['id_universo']) ?>" title="Sincronizar las tres partes de este universo">Sincronizar</button>
+                    <button type="button" class="btn" data-sincronizar-fila="<?= $e($u['id_universo']) ?>" title="Sincronizar todas las partes de este universo">Sincronizar</button>
                 </td>
             </tr>
         <?php endforeach; ?>

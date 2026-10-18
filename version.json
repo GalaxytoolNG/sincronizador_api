@@ -1,9 +1,9 @@
 {
   "nombre": "sincronizador_api",
-  "version": "1.0.0",
-  "fecha": "2026-10-16",
-  "notas": "Primera versión como complemento: sincronización manual desde la web, por API con clave y por línea de órdenes.",
+  "version": "1.1.0",
+  "fecha": "2026-10-18",
+  "notas": "Añade las partes highscore (puntuaciones de jugadores y alianzas, 12 tipos, con historial diario) y localization (nombres de unidades y misiones). Requiere núcleo 1.1.0.",
   "url": "https://github.com/GalaxytoolNG/sincronizador_api",
   "instrucciones_actualizacion": "cd plugins/sincronizador_api && git pull && bin/galaxytool complementos:migrar sincronizador_api",
-  "nucleo_minimo": "1.0.0"
+  "nucleo_minimo": "1.1.0"
 }

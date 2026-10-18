@@ -81,7 +81,10 @@ final class Complemento extends ComplementoBase
         foreach ($partes as $p) {
             try {
                 $r = $servicio->sincronizar($url, $p);
-                printf("%-10s %-12s %s (%d registros, datos de %s)\n", $r['id_universo'], $p, $r['sin_cambios'] ? 'sin cambios' : 'ok', $r['registros'], date('d/m/Y H:i', $r['timestamp']));
+                printf("%-10s %-12s %s (%d registros, datos de %s)%s\n", $r['id_universo'], $p, $r['sin_cambios'] ? 'sin cambios' : 'ok', $r['registros'], date('d/m/Y H:i', $r['timestamp']), !empty($r['aviso']) ? ' AVISO: ' . $r['aviso'] : '');
+                if (!empty($r['aviso'])) {
+                    $codigo = 1;
+                }
             } catch (\RuntimeException $e) {
                 printf("%-10s %-12s ERROR %s\n", $universo, $p, $e->getMessage());
                 $codigo = 1;

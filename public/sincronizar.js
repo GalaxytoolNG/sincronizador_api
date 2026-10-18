@@ -106,7 +106,11 @@
             if (datos.error) {
                 throw new Error(datos.mensaje || 'Error');
             }
-            ponerEstado(tarea.td, 'ok', datos.sin_cambios ? 'Sin cambios · datos de ' + datos.fecha : 'OK · ' + datos.registros + ' registros · datos de ' + datos.fecha);
+            var texto = datos.sin_cambios ? 'Sin cambios · datos de ' + datos.fecha : 'OK · ' + datos.registros + ' registros · datos de ' + datos.fecha;
+            if (datos.aviso) {
+                texto += ' · Aviso: ' + datos.aviso;
+            }
+            ponerEstado(tarea.td, datos.aviso ? 'error' : 'ok', texto);
             var ultima = tarea.td.querySelector('.ultima');
             if (ultima) {
                 ultima.textContent = datos.fecha;

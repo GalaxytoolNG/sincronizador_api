@@ -66,6 +66,9 @@ final class SincronizadorControlador extends ControladorWeb
             if ($conFecha) {
                 $respuesta['fecha'] = date('d/m/Y H:i', $resultado['timestamp']);
             }
+            if (!empty($resultado['aviso'])) {
+                $respuesta['aviso'] = $resultado['aviso'];
+            }
             $this->json($respuesta);
         } catch (\PDOException $e) {
             error_log('Sincronizador: ' . $e->getMessage());

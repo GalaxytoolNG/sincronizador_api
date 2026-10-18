@@ -1,7 +1,8 @@
 /* Sincronizador del API: estilos propios del complemento (la rueda .estado la aporta el núcleo) */
 #sincronizador th.columna-api label { display: inline; margin: 0; color: var(--texto-blanco); font-weight: 700; cursor: pointer; }
 #sincronizador .acciones-globales { display: flex; gap: 6px; }
-#sincronizador td.celda-api { min-width: 140px; }
+#sincronizador { overflow-x: auto; }
+#sincronizador td.celda-api { min-width: 120px; }
 #sincronizador .opcion { display: inline-flex; align-items: center; gap: 6px; margin: 0; font-weight: 400; color: var(--texto); cursor: pointer; }
 #sincronizador .ultima { display: block; color: var(--texto-secundario); font-size: 10px; margin-top: 2px; }
 #sincronizador .detalle { display: block; font-size: 10px; margin-top: 2px; min-height: 12px; color: var(--texto-tabla); }
